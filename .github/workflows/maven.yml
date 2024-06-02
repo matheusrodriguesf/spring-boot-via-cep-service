@@ -30,7 +30,7 @@ jobs:
           ${{ runner.os }}-maven-
 
     - name: Change to project directory
-      run: cd spring-boot-via-cep-service
+      run: cd cep-service
 
     - name: Install dependencies
       run: mvn install -DskipTests
