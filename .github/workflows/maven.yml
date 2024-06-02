@@ -7,8 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-
+  build_and_test:
     runs-on: ubuntu-latest
 
     steps:
@@ -35,8 +34,15 @@ jobs:
     - name: Run tests
       run: cd cep-service && mvn test
 
+  build_docker_image:
+    needs: build_and_test
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
     - name: Build Docker image
-      if: success()
       uses: docker/build-push-action@v2
       with:
         context: ./cep-service
