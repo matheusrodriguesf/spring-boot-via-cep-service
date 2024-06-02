@@ -29,11 +29,8 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-maven-
 
-    - name: Change to project directory
-      run: cd cep-service
-
     - name: Install dependencies
-      run: mvn install -DskipTests
+      run: cd cep-service && mvn install -DskipTests
 
     - name: Run tests
-      run: mvn test
+      run: cd cep-service && mvn test
