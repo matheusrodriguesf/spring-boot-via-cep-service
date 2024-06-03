@@ -19,6 +19,6 @@ public class ViaCepController {
 
     @GetMapping("/{cep}")
     public ResponseEntity<Endereco> consultaCep(@PathVariable String cep) {
-        return ResponseEntity.ok(viaCepClient.viaCepRequest().consultaCep(cep
+        return ResponseEntity.ok(viaCepClient.viaCepRequest().consultaCep(cep));
     }
 }
