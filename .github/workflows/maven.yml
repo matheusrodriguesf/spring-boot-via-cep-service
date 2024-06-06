@@ -61,3 +61,4 @@ jobs:
       with:
         service-id: ${{ secrets.RENDER_PROJECT_ID }}
         api-key: ${{ secrets.RENDER_API_KEY }}
+        wait-for-success: true
