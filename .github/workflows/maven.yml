@@ -51,9 +51,13 @@ jobs:
         tags: |
           ${{ secrets.DOCKER_HUB_USERNAME }}/via-cep-service:${{ github.sha }}
           ${{ secrets.DOCKER_HUB_USERNAME }}/via-cep-service:latest
-    
+  
+  deploy_render:
+    needs: build_docker_image
+    runs-on: ubuntu-latest
+    steps:
     - name: Deploy to Render
-      run: |
-        RENDER_URL=$(curl -s https://api.render.com/v1/projects/${{ secrets.RENDER_PROJECT_ID }}/services/${{ secrets.RENDER_SERVICE_ID }} | jq -r '.url')
-        RENDER_ACCESS_TOKEN=$(echo "${{ secrets.RENDER_API_KEY }}" | base64 -d)
-        curl -X POST -H "Authorization: Bearer ${RENDER_ACCESS_TOKEN}" -H "Content-Type: application/json" -d '{ "image": "${{ secrets.DOCKER_HUB_USERNAME }}/via-cep-service:${{ github.sha }}" }' "${RENDER_URL}/deploy"               
+      uses: johnbeynon/render-deploy-action@v0.0.8
+      with:
+        service-id: ${{ secrets.RENDER_PROJECT_ID }}
+        api-key: ${{ secrets.RENDER_API_KEY }}
