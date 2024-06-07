@@ -1,4 +1,5 @@
-# Consulta de endereço por meio de CEP
+# Consulta de endereço por meio de CEP ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/matheusrodriguesf/spring-boot-via-cep-service/maven)
+
 
 Serviço de consulta de endereço que faz integração com API do VIACEP.
 
