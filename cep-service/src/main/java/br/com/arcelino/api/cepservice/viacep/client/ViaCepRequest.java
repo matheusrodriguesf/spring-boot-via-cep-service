@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import br.com.arcelino.api.cepservice.viacep.api.Endereco;
 
-@FeignClient(name = "viacep", url = "https://viacep.com.br/ws")
+@FeignClient(name = "viacep", url = "${viacep.url}")
 public interface ViaCepRequest {
 
     @GetMapping("/{cep}/json")
