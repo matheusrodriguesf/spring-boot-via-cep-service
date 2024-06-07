@@ -26,6 +26,9 @@ jobs:
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-maven-
+    
+    - name: Executa o lint do código
+      run: mvn checkstyle:checkstyle        
 
     - name: Execulta os testes unitários
       run: cd cep-service && mvn test
@@ -61,3 +64,4 @@ jobs:
       with:
         service-id: ${{ secrets.RENDER_SERVICE_ID }}
         api-key: ${{ secrets.RENDER_API_KEY }}
+        wait-for-success: true
