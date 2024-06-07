@@ -1,2 +1,2 @@
 viacep:
-  url: https://viacep.com.br/ws
+  url: ${VIACEP_URL:https://viacep.com.br/ws}
