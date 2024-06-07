@@ -1,4 +1,5 @@
-# Consulta de endereço por meio de CEP
+# Consulta de endereço por meio de CEP [![spring-boot-via-cep-service CI](https://github.com/matheusrodriguesf/spring-boot-via-cep-service/actions/workflows/maven.yml/badge.svg)](https://github.com/matheusrodriguesf/spring-boot-via-cep-service/actions/workflows/maven.yml)
+
 
 Serviço de consulta de endereço que faz integração com API do VIACEP.
 
