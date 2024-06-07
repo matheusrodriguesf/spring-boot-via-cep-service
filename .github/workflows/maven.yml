@@ -28,7 +28,7 @@ jobs:
           ${{ runner.os }}-maven-
     
     - name: Executa o lint do código
-      run: mvn checkstyle:checkstyle        
+      run: cd cep-service && mvn checkstyle:checkstyle        
 
     - name: Execulta os testes unitários
       run: cd cep-service && mvn test
