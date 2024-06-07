@@ -1,5 +1,9 @@
 # Consulta de endereço por meio de CEP [![spring-boot-via-cep-service CI](https://github.com/matheusrodriguesf/spring-boot-via-cep-service/actions/workflows/maven.yml/badge.svg)](https://github.com/matheusrodriguesf/spring-boot-via-cep-service/actions/workflows/maven.yml)
 
+![Java version](https://img.shields.io/badge/Java-17-orange) ![Docker Image](https://img.shields.io/badge/Docker-yes-blue) ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.0.6-brightgreen)
+
+![GitHub stars](https://img.shields.io/github/stars/matheusrodriguesf/spring-boot-via-cep-service?style=social) ![GitHub forks](https://img.shields.io/github/forks/matheusrodriguesf/spring-boot-via-cep-service)
+
 
 Serviço de consulta de endereço que faz integração com API do VIACEP.
 
