@@ -17,7 +17,7 @@ public class HelloWordControllerTest {
 
     @Test
     public void testHello() throws Exception {
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/v2/hello"))
+        mockMvc.perform(MockMvcRequestBuilders.get("/api/v3/hello"))
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 .andExpect(MockMvcResultMatchers.content().string("Hello Word!"));
 
