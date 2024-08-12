@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: consulta-cep-service
+  labels:
+    app: consulta-cep-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: consulta-cep-service
+  template:
+    metadata:
+      labels:
+        app: consulta-cep-service
+    spec:
+      containers:
+      - name: consulta-cep-service
+        image: matheusrfa/via-cep-service:latest
+        ports:
+        - containerPort: 8080
